@@ -5,9 +5,9 @@ import * as actionsContact from '../../redux/contacts/contacts-actions';
 import styles from './Filter.module.css';
 
 const Filter = ({ valueFilter, onChangeFilter }) => (
-  <>
+  <div className={styles.wrap}>
     <label className={styles.labelFilter}>
-      Find contacts by name
+      Find contacts
       <input
         className={styles.inputFilter}
         type="text"
@@ -15,7 +15,7 @@ const Filter = ({ valueFilter, onChangeFilter }) => (
         onChange={onChangeFilter}
       />
     </label>
-  </>
+  </div>
 );
 
 Filter.propTypes = {

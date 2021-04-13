@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    to right bottom,
+    rgba(43, 44, 78, 0.5),
+    rgba(104, 22, 96, 0.5)
+  );
 }
 
 code {
@@ -13,7 +18,8 @@ code {
 }
 
 * {
-  outline-color: #d29dec;
+  box-sizing: border-box;
+  outline: none;
 }
 
 .container {

@@ -77,24 +77,23 @@ class ContactForm extends Component {
               onChange={this.handleInputChange}
             />
           </label>
-        </div>
-        <div className={styles.formField}>
-          <label className={styles.formLabel}>
-            Number
-            <input
-              className={styles.formInput}
-              type="tel"
-              name="number"
-              placeholder="Enter phone"
-              value={number}
-              onChange={this.handleInputChange}
-            />
-          </label>
-        </div>
+
+        <label className={styles.formLabel}>
+          Number
+          <input
+            className={styles.formInput}
+            type="tel"
+            name="number"
+            placeholder="Enter phone"
+            value={number}
+            onChange={this.handleInputChange}
+          />
+        </label>
 
         <button type="submit" className={styles.btnSubmit}>
           Add contact
         </button>
+        </div>
       </form>
     );
   }

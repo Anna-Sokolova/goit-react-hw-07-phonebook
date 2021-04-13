@@ -12,6 +12,8 @@ const ContactList = ({ contacts, onDeleteContact }) => (
           <p>
             {name}
             <span className={styles.divider}>:</span>
+          </p>
+          <p>
             <span className={styles.tel}>{number}</span>
           </p>
           <button

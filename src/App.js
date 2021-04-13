@@ -9,14 +9,9 @@ const App = () => {
     <div className="container">
       <Title title="Phonebook" />
       <ContactForm />
-
-      <div className="container">
-        <div>
-          <Title title="Contacts" />
-          <Filter />
-          <ContactList />
-        </div>
-      </div>
+      <Filter />
+      <Title title="Contacts" />
+      <ContactList />
     </div>
   );
 };
