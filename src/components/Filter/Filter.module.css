@@ -1,0 +1,11 @@
+.labelFilter {
+  font-size: 18px;
+  text-decoration-line: underline;
+  color: #7b14af;
+}
+
+.inputFilter {
+  margin-left: 20px;
+  width: 300px;
+  padding: 10px;
+}
