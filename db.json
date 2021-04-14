@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "id": "id-1",
+      "name": "Anna",
+      "number": "111 111 111"
+    },
+    {
+      "id": "id-2",
+      "name": "Vicktoria",
+      "number": "222 222 222"
+    },
+    {
+      "id": "id-3",
+      "name": "Dima",
+      "number": "333 333 333"
+    },
+    {
+      "id": "id-4",
+      "name": "Nickol",
+      "number": "444 444 444"
+    }
+  ]
+}
