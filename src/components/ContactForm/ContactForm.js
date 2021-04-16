@@ -17,9 +17,7 @@ class ContactForm extends Component {
   };
 
   static propTypes = {
-    name: PropTypes.string,
-    number: PropTypes.string,
-    state: PropTypes.array,
+    contacts: PropTypes.array,
     onSubmit: PropTypes.func.isRequired,
   };
 
@@ -72,9 +70,13 @@ class ContactForm extends Component {
               className={styles.formInput}
               type="text"
               name="name"
+              pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
               placeholder="Enter name"
+              title="Введите Имя и/или Имя и Фамилию"
+              autoComplete="off"
               value={name}
               onChange={this.handleInputChange}
+              required
             />
           </label>
 
@@ -84,9 +86,13 @@ class ContactForm extends Component {
               className={styles.formInput}
               type="tel"
               name="number"
+              pattern="[0-9\s]{10,}"
               placeholder="Enter phone"
+              title="Введите номер телефона в формате 067 888 88 88"
+              autoComplete="off"
               value={number}
               onChange={this.handleInputChange}
+              required
             />
           </label>
 

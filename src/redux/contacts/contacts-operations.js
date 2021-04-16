@@ -26,4 +26,5 @@ const deleteContact = contactId => dispatch => {
     .catch(error => contactActions.deleteContactError(error));
 };
 
+
 export default { addContact, deleteContact };
