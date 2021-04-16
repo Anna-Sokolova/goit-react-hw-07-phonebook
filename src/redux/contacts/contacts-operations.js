@@ -3,6 +3,15 @@ import contactActions from './contacts-actions';
 
 axios.defaults.baseURL = 'http://localhost:5000';
 
+const fetchContacts = () => dispatch => {
+  dispatch(contactActions.fetchContactRequest());
+
+  axios
+    .get('/contacts')
+    .then(({ data }) => dispatch(contactActions.fetchContactSuccess(data)))
+    .catch(error => dispatch(contactActions.fetchContactError(error)));
+};
+
 const addContact = data => dispatch => {
   const contact = {
     name: data.name,
@@ -26,5 +35,4 @@ const deleteContact = contactId => dispatch => {
     .catch(error => contactActions.deleteContactError(error));
 };
 
-
-export default { addContact, deleteContact };
+export default { fetchContacts, addContact, deleteContact };

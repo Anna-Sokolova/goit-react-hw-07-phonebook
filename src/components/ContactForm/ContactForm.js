@@ -30,14 +30,14 @@ class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
 
     if (this.state.name.trim() === '' || this.state.number.trim() === '') {
       alert('Please enter valid information!');
       this.reset();
       return;
     }
-    console.log(this.props.contacts.items);
+    // console.log(this.props.contacts.items);
 
     const findName = this.props.contacts.find(
       contact => contact.name.toLowerCase() === this.state.name.toLowerCase(),
