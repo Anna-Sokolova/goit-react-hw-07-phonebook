@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import * as actionsContact from '../../redux/contacts/contacts-actions';
+import operationsContact from '../../redux/contacts/contacts-operations';
 import styles from './ContactForm.module.css';
 
 class ContactForm extends Component {
@@ -32,16 +32,16 @@ class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    // console.log(this.state);
+    console.log(this.state);
 
     if (this.state.name.trim() === '' || this.state.number.trim() === '') {
       alert('Please enter valid information!');
       this.reset();
       return;
     }
-    // console.log(this.props.contacts.items);
+    console.log(this.props.contacts.items);
 
-    const findName = this.props.contacts.items.find(
+    const findName = this.props.contacts.find(
       contact => contact.name.toLowerCase() === this.state.name.toLowerCase(),
     );
 
@@ -78,31 +78,33 @@ class ContactForm extends Component {
             />
           </label>
 
-        <label className={styles.formLabel}>
-          Number
-          <input
-            className={styles.formInput}
-            type="tel"
-            name="number"
-            placeholder="Enter phone"
-            value={number}
-            onChange={this.handleInputChange}
-          />
-        </label>
+          <label className={styles.formLabel}>
+            Number
+            <input
+              className={styles.formInput}
+              type="tel"
+              name="number"
+              placeholder="Enter phone"
+              value={number}
+              onChange={this.handleInputChange}
+            />
+          </label>
 
-        <button type="submit" className={styles.btnSubmit}>
-          Add contact
-        </button>
+          <button type="submit" className={styles.btnSubmit}>
+            Add contact
+          </button>
         </div>
       </form>
     );
   }
 }
 
-const mapStateToProps = state => state;
+const mapStateToProps = state => ({
+  contacts: state.contacts.items,
+});
 
 const mapDispatchToProps = dispatch => ({
-  onSubmit: data => dispatch(actionsContact.addContact(data)),
+  onSubmit: data => dispatch(operationsContact.addContact(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
