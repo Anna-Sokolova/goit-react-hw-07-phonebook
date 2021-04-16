@@ -6,9 +6,24 @@
       "id": 1
     },
     {
-      "name": "Міхєєва",
-      "number": "55555",
+      "name": "Anna Lova",
+      "number": "067 793  08 85",
       "id": 2
+    },
+    {
+      "name": "Vika",
+      "number": "0500000000",
+      "id": 3
+    },
+    {
+      "name": "lova",
+      "number": "0500000000",
+      "id": 4
+    },
+    {
+      "name": "Dima",
+      "number": "0501111111",
+      "id": 5
     }
   ]
 }
