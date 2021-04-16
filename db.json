@@ -1,29 +1,19 @@
 {
   "contacts": [
     {
-      "name": "viktoorija_0602",
-      "number": "067 793 0885",
-      "id": 1
-    },
-    {
-      "name": "Anna Lova",
-      "number": "067 793  08 85",
-      "id": 2
-    },
-    {
-      "name": "Vika",
-      "number": "0500000000",
-      "id": 3
-    },
-    {
-      "name": "lova",
-      "number": "0500000000",
+      "name": "Nickol",
+      "number": "063 000 00 00",
       "id": 4
     },
     {
-      "name": "Dima",
-      "number": "0501111111",
+      "name": "Anna",
+      "number": "067 777 77 77",
       "id": 5
+    },
+    {
+      "name": "Mango",
+      "number": "0203334455",
+      "id": 6
     }
   ]
 }
