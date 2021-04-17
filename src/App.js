@@ -9,7 +9,6 @@ import operationContacts from './redux/contacts/contacts-operations';
 import selectorsContacts from './redux/contacts/contacts-selectors';
 
 class App extends Component {
-  state = {};
 
   componentDidMount() {
     this.props.fetchAllContacts();
